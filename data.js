@@ -2,6 +2,9 @@ window.DEMO_DATA = {
   "records": [
     {
       "id": 1,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "glove",
       "label": "Ausência de Luvas",
       "image": "assets/evidence-01.jpg",
@@ -253,6 +256,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 3,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "glove",
       "label": "Ausência de Luvas",
       "image": "assets/evidence-03.jpg",
@@ -504,6 +510,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 2,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "glove",
       "label": "Ausência de Luvas",
       "image": "assets/evidence-02.jpg",
@@ -755,6 +764,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 4,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "isolated_area",
       "label": "Circulação em Área Isolada",
       "image": "assets/evidence-04.jpg",
@@ -1006,6 +1018,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 5,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "safety_helmet",
       "label": "Ausência de Capacete",
       "image": "assets/evidence-05.jpg",
@@ -1257,6 +1272,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 6,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "isolated_area",
       "label": "Circulação em Área Isolada",
       "image": "assets/evidence-06.jpg",
@@ -1508,6 +1526,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 7,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "safety_vest",
       "label": "Ausência de Colete",
       "image": "assets/evidence-07.jpg",
@@ -1759,6 +1780,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 8,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "safety_vest",
       "label": "Ausência de Colete",
       "image": "assets/evidence-08.jpg",
@@ -2010,6 +2034,9 @@ window.DEMO_DATA = {
     },
     {
       "id": 9,
+      "camera_id": 1,
+      "camera_name": "Camera Demo",
+      "pte": null,
       "type": "isolated_area",
       "label": "Circulação em Área Isolada",
       "image": "assets/evidence-09.jpg",
