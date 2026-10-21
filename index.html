@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração do dossiê de evidências SafeWatch com registros da Camera Demo.">
+  <meta name="color-scheme" content="light">
+  <title>SafeWatch · Dossiê de evidências</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  <aside class="sidebar">
+    <a href="#evidencias" class="brand"><img src="assets/logo.png" alt="Quickium"><span>SafeWatch<small>Dossiê de evidências</small></span></a>
+    <div class="workspace"><span class="workspace-icon">D</span><div>Ambiente de demonstração<small>Camera Demo</small></div></div>
+    <nav aria-label="Navegação principal">
+      <a href="#evidencias" data-page="evidencias"><span aria-hidden="true">▦</span> Evidências</a>
+      <a href="#dossie" data-page="dossie"><span aria-hidden="true">▤</span> Dossiê de exemplo</a>
+      <a href="#analise" data-page="analise"><span aria-hidden="true">◉</span> Análise Jev</a>
+      <a href="#criterios" data-page="criterios"><span aria-hidden="true">☷</span> Critérios visuais</a>
+      <a href="#sobre" data-page="sobre"><span aria-hidden="true">ⓘ</span> Sobre a demo</a>
+    </nav>
+    <div class="sidebar-note"><span class="eyebrow">DEMONSTRAÇÃO PÚBLICA</span><p>Explore registros, resultados reais do Jev e o dossiê. Novas análises exigem a plataforma completa.</p><a href="https://github.com/Quickium/safe-compliance-demo" target="_blank" rel="noopener noreferrer">Ver repositório ↗</a></div>
+  </aside>
+  <main id="content">
+    <header class="topbar"><span>SafeWatch <span class="divider">/</span> Apoio à decisão</span><span class="demo-badge"><span></span> Demo estática</span></header>
+    <section id="evidencias" class="page">
+      <div class="page-heading"><div><span class="eyebrow">REGISTROS E EVIDÊNCIAS</span><h1>Da ocorrência ao dossiê.</h1><p>Uma visão rastreável dos registros da Camera Demo.</p></div><a href="#dossie" class="button primary">Abrir dossiê de exemplo <span aria-hidden="true">↗</span></a></div>
+      <div class="notice"><span aria-hidden="true">ⓘ</span><p>Esta demo apresenta os dados fornecidos na planilha de 21/10/2026. Os tipos de ocorrência são registros da origem, avaliados separadamente pelo Jev. Observações de IA não confirmam infração nem conformidade.</p></div>
+      <form id="filters" class="filter-bar">
+        <label>Câmera<select id="camera"><option>Camera Demo</option></select></label>
+        <label>Data inicial<input id="start" type="date" value="2026-10-21"></label>
+        <label>Data final<input id="end" type="date" value="2026-10-21"></label>
+        <label>Tipo de ocorrência<select id="type"><option value="">Todos os tipos</option></select></label>
+        <button type="reset" class="button subtle">Limpar filtros</button>
+      </form>
+      <p id="filter-error" class="error" role="alert" hidden></p>
+      <div class="metrics" aria-live="polite">
+        <article class="metric"><span>Ocorrências no recorte</span><strong id="count">9</strong><small>Registros da planilha</small></article>
+        <article class="metric"><span>Imagens distintas</span><strong id="distinct">7</strong><small id="image-count">9 arquivos vinculados</small></article>
+        <article class="metric"><span>Sem PTE associada</span><strong id="without-pte">9</strong><small>Informado pelo usuário</small></article>
+        <article class="metric"><span>Leitura por IA</span><strong class="metric-text">9 avaliadas</strong><small>126 respostas reais do Jev</small></article>
+      </div>
+      <div class="section-title"><div><h2>Evidências do período</h2><p id="result-label">9 registros · horário de Brasília</p></div><div class="view-toggle" role="group" aria-label="Exibição dos registros"><button type="button" id="grid-view" aria-pressed="true">Galeria</button><button type="button" id="table-view" aria-pressed="false">Tabela</button></div></div>
+      <div id="gallery" class="gallery"></div>
+      <div id="records-table" class="table-wrap" hidden><table><thead><tr><th>Registro</th><th>Data e hora</th><th>Câmera</th><th>Ocorrência</th><th>PTE</th><th>Evidência</th></tr></thead><tbody id="records-body"></tbody></table></div>
+      <div id="empty" class="empty" hidden><h3>Nenhum registro neste recorte</h3><p>Altere as datas ou limpe os filtros para voltar às nove ocorrências.</p></div>
+      <div class="source-note"><span class="status-dot"></span><span>Origem: dados.ods · Todos os registros são da Camera Demo · Sem PTE associada</span></div>
+    </section>
+    <section id="dossie" class="page" hidden>
+      <div class="page-heading"><div><span class="eyebrow">DOCUMENTO DE APOIO À DECISÃO</span><h1>Dossiê de exemplo</h1><p>O mesmo conteúdo estruturado em PDF e em uma versão editável.</p></div><span class="pill">21 de outubro de 2026</span></div>
+      <div class="document-layout"><article class="card document-card"><span class="file-symbol">PDF</span><h2>Camera Demo</h2><p>9 ocorrências · 21/10/2026<br>Unidade não informada na origem</p><a class="button primary" href="assets/dossie-jev.pdf" target="_blank" rel="noopener">Abrir PDF ↗</a><a class="button outline" href="assets/dossie-jev.pdf" download="dossie-camera-demo-2026-10-21.pdf">Baixar PDF</a><a class="button subtle" href="assets/dossie-jev.docx" download>Baixar versão editável · DOCX</a><small>Documento completo das nove ocorrências. Os filtros da galeria não alteram este exemplo.</small></article>
+      <article class="card"><span class="eyebrow">O QUE O DOCUMENTO CONTÉM</span><h2>Registros com origem identificada</h2><ol class="document-parts"><li><strong>Identificação e resumo</strong><span>Período, unidade, versão do gerador e totais.</span></li><li><strong>Indicadores e evidências</strong><span>Tipos, câmera, PTE, horários e referências dos arquivos.</span></li><li><strong>Rastreabilidade</strong><span>Linha da planilha, arquivo original e SHA-256.</span></li><li><strong>Pendências e revisão</strong><span>Fontes ausentes e espaço para o responsável conferir.</span></li></ol><div class="notice compact"><p>O dossiê inclui as observações reais do Jev, com alvo e confiança por resposta. Não é laudo, certificado ou declaração de conformidade.</p></div></article></div>
+      <article class="card"><h2>Conferência com a planilha</h2><div class="reconciliation"><div><strong>3</strong><span>Ausência de luvas</span></div><div><strong>3</strong><span>Circulação em área isolada</span></div><div><strong>2</strong><span>Ausência de colete</span></div><div><strong>1</strong><span>Ausência de capacete</span></div></div><p class="muted">Alarmes disparados e relatórios enviados não foram fornecidos. Esses indicadores aparecem como indisponíveis, sem atribuir valor zero.</p></article>
+    </section>
+    <section id="analise" class="page" hidden>
+      <div class="page-heading"><div><span class="eyebrow">RESULTADOS REAIS DO MODELO</span><h1>Leitura das imagens com Jev</h1><p>Uma avaliação por foto, com alvo específico e critérios declarados.</p></div><a class="button primary" href="assets/dossie-jev.pdf" target="_blank" rel="noopener">Abrir dossiê com análise ↗</a></div>
+      <div class="notice"><p>Resultados previamente processados no Jev, sem chamadas de API no navegador. “Não verificável” indica limitação de visibilidade ou confiança abaixo de 0,60; não comprova ausência de equipamento. Fotos com marcações e resolução reduzida podem influenciar a avaliação.</p></div>
+      <div class="metrics"><article class="metric"><span>Imagens avaliadas</span><strong>9</strong><small>Modelo jev-latest</small></article><article class="metric"><span>Sim</span><strong>14</strong><small>Observações, sem juízo normativo</small></article><article class="metric"><span>Não</span><strong>41</strong><small>Observações, sem juízo normativo</small></article><article class="metric"><span>Não verificável</span><strong>71</strong><small>Visibilidade ou confiança insuficiente</small></article></div>
+      <p id="analysis-meta" class="muted"></p><div id="analysis-list"></div>
+    </section>
+    <section id="criterios" class="page" hidden>
+      <div class="page-heading"><div><span class="eyebrow">LÓGICA DO NOTEBOOK JEV</span><h1>O critério vem antes da resposta.</h1><p>Cada pergunta define o que conta como sim, não e não verificável.</p></div><span class="pill">Limiar de confiança: 0,60</span></div>
+      <div class="notice"><p>Na plataforma completa, o Jev recebe a foto, o alvo descrito e os critérios. Respostas com confiança abaixo de 0,60 ficam como “não verificável”. A aba Análise Jev apresenta o resultado real já processado. Esta demo estática não executa novas chamadas.</p></div>
+      <div class="criteria-intro card"><h2>Um alvo por avaliação</h2><p>Descreva uma pessoa específica quando a pergunta for individual. O tipo de ocorrência registrado na planilha não é enviado como resposta esperada. Não verificável indica limitação de visibilidade; nunca comprova ausência de EPI.</p><p class="muted">Todos os critérios deste catálogo estão em rascunho e dependem de revisão técnica. Nenhum deles atesta atendimento normativo.</p></div>
+      <div id="criteria-list" class="criteria-list"></div>
+    </section>
+    <section id="sobre" class="page" hidden>
+      <div class="page-heading"><div><span class="eyebrow">ESCOPO E LIMITAÇÕES</span><h1>Uma demonstração de evidências.</h1><p>O que você está explorando e o que depende da plataforma completa.</p></div></div>
+      <div class="about-grid"><article class="card"><h2>Disponível nesta demo</h2><ul class="feature-list"><li>Nove ocorrências e suas imagens</li><li>Filtros por data e tipo</li><li>Galeria e tabela de registros</li><li>Detalhes, procedência e hashes</li><li>Dossiê em PDF e DOCX</li><li>126 respostas reais do Jev com confiança</li><li>Catálogo com critérios observáveis</li></ul></article><article class="card"><h2>Na plataforma Django</h2><ul class="feature-list"><li>Login de operador</li><li>Importação de dados</li><li>Execução do Jev com chave protegida no servidor</li><li>Geração de novos dossiês</li><li>Histórico, fila, cancelamento e retomada</li></ul><p class="muted">O GitHub Pages serve conteúdo estático e não executa Python ou chamadas autenticadas à IA.</p></article></div>
+      <article class="card"><h2>Procedência e revisão</h2><p>As fotos e a planilha foram fornecidas pelo responsável pela demonstração. Câmera “Camera Demo” e ausência de PTE foram informadas por ele. A identificação da unidade, alarmes e relatórios enviados não foram fornecidos.</p><p>Os registros não têm validação independente. Algumas imagens possuem marcações sobrepostas na origem, o que pode influenciar uma avaliação visual. Existem arquivos iguais em horários distintos; as nove ocorrências foram preservadas.</p><p>Referências normativas e critérios visuais exigem validação técnica. Cursos com certificado e verificação pública pertencem a outras entregas do spec e não estão implementados nesta demo.</p><a class="text-link" href="https://github.com/Quickium/safe-compliance-demo" target="_blank" rel="noopener noreferrer">Código público da demo ↗</a></article>
+    </section>
+    <footer>SafeWatch · Apoio à decisão <span>Revisão humana necessária</span></footer>
+  </main>
+  <dialog id="evidence-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><div><span class="eyebrow">EVIDÊNCIA DA OCORRÊNCIA</span><h2 id="dialog-title"></h2></div><button type="button" id="close-dialog" aria-label="Fechar detalhes">×</button></div><img id="dialog-image" alt=""><div id="dialog-content"></div></dialog>
+  <noscript><p class="noscript">Ative o JavaScript para explorar os registros. O <a href="assets/dossie-jev.pdf">dossiê em PDF</a> continua disponível.</p></noscript>
+</body>
+</html>
